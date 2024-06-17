@@ -531,7 +531,7 @@ void nas_5g::release_proc_trans_id(uint32_t proc_id)
 
 void nas_5g::set_nssai(srsran::nas_5g::s_nssai_t& s_nssai)
 {
-  if (cfg.nssai_sd == 0) {
+  if (cfg.nssai_sd == 0xffffff) {
     s_nssai.type = s_nssai_t::SST_type_::options::sst;
   } else {
     s_nssai.type = s_nssai_t::SST_type_::options::sst_and_sd;
